@@ -939,7 +939,7 @@ var Bar = function Bar(_ref5) {
     });
 
     result.bars = result.bars.filter(function (bar) {
-        return bar.height === 0;
+        return layout === 'vertical' ? bar.height !== 0 : bar.width !== 0;
     });
 
     return React__default.createElement(
@@ -1232,11 +1232,9 @@ var BarCanvas = function (_Component) {
             left: axisLeft
         });
 
-        result.bars = result.bars.filter(function (bar) {
-            return bar.height === 0;
-        });
-
-        result.bars.forEach(function (_ref) {
+        result.bars.filter(function (bar) {
+            return layout === 'vertical' ? bar.height !== 0 : bar.width !== 0;
+        }).forEach(function (_ref) {
             var x = _ref.x,
                 y = _ref.y,
                 color = _ref.color,
