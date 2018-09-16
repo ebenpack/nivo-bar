@@ -938,9 +938,9 @@ var Bar = function Bar(_ref5) {
         };
     });
 
-    result.bars = result.bars.filter(function (bar) {
-        return layout === 'vertical' ? bar.height !== 0 : bar.width !== 0;
-    });
+    // result.bars = result.bars.filter(function (bar) {
+    //     return layout === 'vertical' ? bar.height !== 0 : bar.width !== 0;
+    // });
 
     return React__default.createElement(
         core.Container,
