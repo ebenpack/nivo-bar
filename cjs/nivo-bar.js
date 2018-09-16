@@ -340,25 +340,23 @@ var generateVerticalStackedBars = function generateVerticalStackedBars(_ref) {
                     barHeight -= innerPadding;
                 }
 
-                if (barHeight > 0) {
-                    var barData = {
-                        id: stackedDataItem.key,
-                        value: d.data[stackedDataItem.key],
-                        index: i,
-                        indexValue: index,
-                        data: d.data
-                    };
+                var barData = {
+                    id: stackedDataItem.key,
+                    value: d.data[stackedDataItem.key],
+                    index: i,
+                    indexValue: index,
+                    data: d.data
+                };
 
-                    bars.push({
-                        key: stackedDataItem.key + '.' + index,
-                        data: barData,
-                        x: x,
-                        y: y,
-                        width: barWidth,
-                        height: barHeight,
-                        color: getColor(barData)
-                    });
-                }
+                bars.push({
+                    key: stackedDataItem.key + '.' + index,
+                    data: barData,
+                    x: x,
+                    y: y,
+                    width: barWidth,
+                    height: barHeight,
+                    color: getColor(barData)
+                });
             });
         });
     }
